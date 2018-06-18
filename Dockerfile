@@ -15,7 +15,7 @@ RUN curl -s -o- https://raw.githubusercontent.com/creationix/nvm/v${nvm_version}
   | NVM_DIR=/usr/local/nvm bash
 
 # Install a version of node
-RUN [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm install ${node_version} && npm install -g grunt
+RUN [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm install ${node_version}
 
 # Install Chromium
 RUN apt-get update && apt-get -y install chromium-browser
